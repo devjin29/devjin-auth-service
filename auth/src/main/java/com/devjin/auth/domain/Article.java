@@ -20,7 +20,7 @@ public class Article {
     private String title;
 
     @Column(name="content", nullable = false)
-    private String Content;
+    private String content;
 
     @Builder
     public Article(String title, String content) {
