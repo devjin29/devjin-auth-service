@@ -25,6 +25,6 @@ public class Article {
     @Builder
     public Article(String title, String content) {
         this.title = title;
-        Content = content;
+        this.content = content;
     }
 }

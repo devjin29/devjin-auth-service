@@ -1,6 +1,6 @@
 package com.devjin.auth.service;
 
-import com.devjin.auth.Repository.ArticleRepository;
+import com.devjin.auth.repository.ArticleRepository;
 import com.devjin.auth.domain.Article;
 import com.devjin.auth.dto.AddArticleRequest;
 import lombok.RequiredArgsConstructor;
