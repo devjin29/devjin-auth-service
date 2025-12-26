@@ -6,6 +6,8 @@ import com.devjin.auth.dto.AddArticleRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class ArticleService {
@@ -14,5 +16,9 @@ public class ArticleService {
 
     public Article save(AddArticleRequest request) {
         return articleRepository.save(request.toEntity());
+    }
+
+    public List<Article> findAll() {
+        return articleRepository.findAll();
     }
 }
