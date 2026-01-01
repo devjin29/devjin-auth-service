@@ -3,6 +3,7 @@ package com.devjin.auth.controller;
 import com.devjin.auth.domain.Article;
 import com.devjin.auth.dto.AddArticleRequest;
 import com.devjin.auth.dto.ArticleResponse;
+import com.devjin.auth.dto.UpdateArticleRequest;
 import com.devjin.auth.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -49,6 +50,13 @@ public class ArticleApiController {
                 .build();
     }
 
+    @PutMapping("/api/articles/{id}")
+    public ResponseEntity<Article> updateArticle(@PathVariable("id") long id,
+                                                 @RequestBody UpdateArticleRequest request){
+        Article updateArticle = articleService.update(id, request);
 
+        return ResponseEntity.ok()
+                .body(updateArticle);
+    }
 
 }
